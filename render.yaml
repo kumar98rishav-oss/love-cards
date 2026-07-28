@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: love-cards
+    runtime: static
+    staticPublishPath: ./public
+    buildCommand: ""
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
